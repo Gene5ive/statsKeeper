@@ -1,4 +1,4 @@
-StatsKeeper.NewPlayerController = Ember.ObjectController.extend({
+StatsKeeper.NewPlayerController = Ember.Controller.extend({
   needs: ['team'],
   actions: {
     save: function() {
@@ -9,6 +9,7 @@ StatsKeeper.NewPlayerController = Ember.ObjectController.extend({
 
       var team = this.get('controllers.team.model');
       team.get('players').pushObject(player);
+      // this.set('playerName', null);
       team.save();
 
       this.transitionToRoute('team', team.id);

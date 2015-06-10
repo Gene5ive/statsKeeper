@@ -2,8 +2,8 @@
   <h1>Stats Keeper!</h1>
 
   <ul>
-    {{#each team in model}}
-      <li>{{#link-to 'team' team}}{{team.name}}{{/link-to}}</li>
+    {{#each team in this}}
+      <li>{{#link-to 'team' team.id}}{{team.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
 

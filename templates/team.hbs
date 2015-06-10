@@ -1,13 +1,13 @@
 <div class="container">
-  <h1>{{team.name}}</h1>
+  <h1>{{this.name}}</h1>
 
   <ul>
-    {{#each player in players itemController="player"}}
-      <li>{{player.name}}</li>
+    {{#each player in players}}
+      <li>{{#link-to 'player' player.id}}{{player.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
 
-{{#link-to 'new-player' this class="btn btn-primary"}}New Player{{/link-to}}
+  {{#link-to 'new-player' this class="btn btn-primary"}}New Player{{/link-to}}
 </div>
 
 {{outlet}}
