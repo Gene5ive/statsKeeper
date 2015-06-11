@@ -1,0 +1,21 @@
+<h2>Did {{name}} make it?</h2>
+
+<div id="stats">
+  <h3>Use these to stat shots during game:</h3>
+  <button class="btn btn-warning" {{action "shotMade"}} name="made">Made it!</button>
+  <br>
+  <br>
+  <button class="btn btn-danger" {{action "shotMissed"}} name="missed">Missed it!</button>
+</div>
+
+<div id="results">
+  <h3>Use these to display stat results as needed:</h3>
+  <button class="btn btn-info" {{action "totalShots"}} name="made">Total</button>
+  <br>
+  <h4>Total Shots: {{totalShots}}</h4>
+  <button class="btn btn-success" {{action "percentage"}} name="made">Percentage</button>
+  <br>
+  <h4>Shots Made: {{shotPercentage}}%</h4>
+</div>
+
+{{outlet}}
