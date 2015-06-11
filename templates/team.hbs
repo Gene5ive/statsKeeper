@@ -1,13 +1,15 @@
 <div class="container">
-  <h1>{{this.name}}</h1>
-
-  <ul>
-    {{#each player in players}}
-      <li>{{#link-to 'player' player.id}}{{player.name}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
-
-  {{#link-to 'new-player' this class="btn btn-primary"}}New Player{{/link-to}}
+  <h1 class="page-header text-center">{{name}}</h1>
+   <div id="row">
+     <ul>
+       {{#each player in players}}
+         <li>{{#link-to 'player' player.id}}{{player.name}}{{/link-to}}</li>
+       {{/each}}
+     </ul>
+   </div>
+   <div class="text-center">
+     {{#link-to 'new-player' classNames="btn btn-primary"}}New Player{{/link-to}}
+   </div>
 </div>
 
 {{outlet}}

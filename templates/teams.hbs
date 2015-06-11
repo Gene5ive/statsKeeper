@@ -1,11 +1,16 @@
 <div class="container">
-  <h1>Stats Keeper!</h1>
-
-  <ul>
-    {{#each team in this}}
-      <li>{{#link-to 'team' team.id}}{{team.name}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
-
-{{#link-to 'new-team' classNames="btn btn-primary"}}New Team{{/link-to}}
+  <h1 class="page-header text-center">Stats Keeper!</h1>
+   <div id="row">
+     <ul>
+       {{#each team in this}}
+         <li>{{#link-to 'team' team.id}}{{team.name}}{{/link-to}}</li>
+       {{/each}}
+     </ul>
+   </div>
+   <div class="text-center">
+     {{#link-to 'new-team' classNames="btn btn-primary"}}New Team{{/link-to}}
+   </div>
 </div>
+
+
+{{outlet}}

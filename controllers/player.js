@@ -26,6 +26,9 @@ StatsKeeper.PlayerController = Ember.ObjectController.extend({
       });
       var total = this.get('shotArray').length;
       this.set("shotPercentage", (Math.floor((made / total) * 100)));
+      $(".progress").html('<div class="progress-bar progress-bar-success" style="width: ' + this.get('shotPercentage') + '%"></div>' +
+                          '<div class="progress-bar progress-bar-danger" style="width: ' + (100 - this.get('shotPercentage')) + '%"></div>'
+      );
     }
   }
 });
